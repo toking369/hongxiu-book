@@ -76,7 +76,7 @@ npm run lint     # 运行 ESLint 代码检查
 
 ### 添加新书
 1. 在 `src/data/books.ts` 的 `allBooks` 数组中添加图书条目
-2. 确保 PDF 文件存在于 `src/content/ebooks/` 目录
+2. 确保 PDF 文件存在于 `src/ebooks/` 目录
 3. 使用图书的 `id` 作为文件名（如 `123.pdf`）
 
 ## 主题系统

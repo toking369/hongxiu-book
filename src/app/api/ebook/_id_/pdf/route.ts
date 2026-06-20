@@ -7,7 +7,7 @@ export async function GET(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
-  const booksDir = path.join(process.cwd(), "src", "content", "ebooks");
+  const booksDir = path.join(process.cwd(), "src", "ebooks");
   
   try {
     const files = fs.readdirSync(booksDir);

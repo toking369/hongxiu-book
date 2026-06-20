@@ -19,7 +19,7 @@ export async function GET(
     return new NextResponse("Book not found: " + id, { status: 404 });
   }
   
-  const booksDir = path.join(process.cwd(), "src", "content", "ebooks");
+  const booksDir = path.join(process.cwd(), "src", "ebooks");
   
   try {
     const files = fs.readdirSync(booksDir);
