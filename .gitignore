@@ -34,5 +34,3 @@ next-env.d.ts
 
 # ebook content (large PDFs)
 *.pdf
-src/content/ebooks/
-src/src/content/
