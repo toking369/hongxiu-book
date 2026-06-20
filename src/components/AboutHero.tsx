@@ -24,7 +24,7 @@ export default function AboutHero() {
             用<span className="text-[var(--red-primary)]">赛博朋克</span>风格呈现知识
           </h1>
           <p className="text-lg text-[var(--text-secondary)] leading-relaxed max-w-2xl">
-            墨金书院是一家专注于证券投资领域的电子书阅读平台。
+            红袖书院是一家专注于证券投资领域的电子书阅读平台。
             我们精选市面上最优秀的投资经典著作，以PDF格式原版呈现，
             采用赛博朋克暗黑风格设计，让阅读成为一种视觉享受。
             所有电子书免费阅读，让每一个交易者都能获取最优质的知识。

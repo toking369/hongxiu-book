@@ -19,7 +19,7 @@ export default function CTASection() {
               开启你的<span className="cursor-pointer text-[var(--red-primary)] text-glow-red">交易进阶</span>之路
             </h2>
             <p className="cursor-pointer text-[var(--text-secondary)] text-base md:text-lg mb-8 max-w-lg mx-auto">
-              加入墨金书院，用知识武装交易，让每一笔投资都有据可依
+              加入红袖书院，用知识武装交易，让每一笔投资都有据可依
             </p>
             <div className="cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-4">
               <button className="cursor-pointer btn-cyber px-10 py-4 rounded-xl text-base font-bold relative z-10 shadow-lg shadow-[var(--red-primary)]/20 min-w-[180px]">

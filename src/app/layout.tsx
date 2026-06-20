@@ -14,7 +14,7 @@ const notoSerifSC = Noto_Serif_SC({
 });
 
 export const metadata: Metadata = {
-  title: "墨金书院 | Cyber Ebook Platform",
+  title: "红袖书院 | Cyber Ebook Platform",
   description: "证券投资知识付费电子书平台 — 用知识武装交易",
   keywords: ["电子书", "知识付费", "证券投资", "股票", "期货"],
   icons: {

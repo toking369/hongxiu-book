@@ -51,7 +51,7 @@ export default function HeroSection() {
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-10 leading-relaxed">
           精选证券投资经典著作，从K线入门到量化交易，<br className="hidden md:block" />
-          顶级交易员的智慧，尽在<span className="text-[var(--gold)]">墨金书院</span>
+          顶级交易员的智慧，尽在<span className="text-[var(--gold)]">红袖书院</span>
         </p>
 
         {/* CTA Buttons */}

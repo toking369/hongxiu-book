@@ -3,7 +3,7 @@ const testimonials = [
     name: "张宇飞",
     role: "职业交易员",
     avatar: "张",
-    content: "墨金书院的电子书质量非常高，K线技术分类里的书几乎涵盖了所有经典。Markdown格式阅读体验远超PDF，强烈推荐。",
+    content: "红袖书院的电子书质量非常高，K线技术分类里的书几乎涵盖了所有经典。Markdown格式阅读体验远超PDF，强烈推荐。",
     rating: 5,
   },
   {

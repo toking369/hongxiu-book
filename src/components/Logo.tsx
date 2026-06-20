@@ -54,7 +54,7 @@ export default function Logo({ size = 36, showText = true, className = "" }: Log
         <div className="flex flex-col leading-tight">
           <div className="flex items-baseline gap-1">
             <span className="text-lg font-black tracking-wider text-[var(--text-primary)]">
-              墨金<span className="text-[var(--gold)]">书院</span>
+              红袖<span className="text-[var(--gold)]">书院</span>
             </span>
           </div>
           <span className="text-[10px] tracking-[0.3em] text-[var(--text-muted)] font-mono uppercase">

@@ -75,7 +75,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-[var(--border-color)] flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[var(--text-muted)]">
-            &copy; {new Date().getFullYear()} 墨金书院. All rights reserved.
+            &copy; {new Date().getFullYear()} 红袖书院. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
             <span className="font-mono">v2.0.1</span>

@@ -8,7 +8,7 @@ const stats = [
 ];
 
 const milestones = [
-  { year: "2025 Q1", title: "平台上线", desc: "墨金书院正式上线，首批收录100+本精品投资电子书，开启知识付费阅读新时代。" },
+  { year: "2025 Q1", title: "平台上线", desc: "红袖书院正式上线，首批收录100+本精品投资电子书，开启知识付费阅读新时代。" },
   { year: "2025 Q2", title: "用户突破", desc: "注册用户突破5000人，平台好评如潮，口碑相传。" },
   { year: "2025 Q3", title: "内容扩展", desc: "书库规模突破200本，覆盖K线技术、趋势分析、交易心理等核心领域。" },
   { year: "2025 Q4", title: "社区启动", desc: "启动交易者社区，与专家在线交流，开启读书分享会。" },
@@ -47,7 +47,7 @@ export default function AboutContent() {
             <h2 className="text-2xl md:text-3xl font-black text-[var(--text-primary)] mb-2">
               发展<span className="text-[var(--gold)]">历程</span>
             </h2>
-            <p className="text-sm text-[var(--text-muted)]">一步步见证墨金书院的成长</p>
+            <p className="text-sm text-[var(--text-muted)]">一步步见证红袖书院的成长</p>
           </div>
           <div className="relative">
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[var(--red-primary)]/30 via-[var(--gold)]/30 to-[var(--red-primary)]/30 -translate-x-1/2" />
