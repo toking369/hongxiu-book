@@ -1,0 +1,404 @@
+﻿@import "tailwindcss";
+
+:root {
+  /* Cyberpunk Dark Theme with Chinese Red accents */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-card: #1a1a28;
+  --bg-card-hover: #222235;
+  --border-color: #2a2a40;
+  --border-glow: rgba(220, 30, 30, 0.3);
+  
+  /* Chinese Red Palette */
+  --red-primary: #DC1E1E;
+  --red-secondary: #B81212;
+  --red-light: #E84A4A;
+  --red-glow: rgba(220, 30, 30, 0.6);
+  --red-accent: #FF2D2D;
+  --red-dark: #8B0000;
+  
+  /* Gold accents for cyberpunk feel */
+  --gold: #D4A84B;
+  --gold-light: #F0D080;
+  --gold-glow: rgba(212, 168, 75, 0.4);
+  
+  /* Text */
+  --text-primary: #F0E6D3;
+  --text-secondary: #A09880;
+  --text-muted: #6B6570;
+  
+  /* Neon */
+  --cyan-glow: rgba(0, 255, 255, 0.15);
+  --purple-glow: rgba(180, 60, 255, 0.1);
+  --header-bg: rgba(10, 10, 15, 0.92);
+}
+
+
+/* ─── Light Theme ─── */
+html[data-theme="light"], [data-theme="light"] {
+  --bg-primary: #F5F0EB;
+  --bg-secondary: #EDE8E2;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8F4F0;
+  --border-color: #D4CEC8;
+  --border-glow: rgba(220, 30, 30, 0.15);
+
+  --red-primary: #C41E1E;
+  --red-secondary: #A01010;
+  --red-light: #D44040;
+  --red-glow: rgba(220, 30, 30, 0.35);
+  --red-accent: #E02020;
+  --red-dark: #8B0000;
+
+  --gold: #B8943E;
+  --gold-light: #D4B060;
+  --gold-glow: rgba(184, 148, 62, 0.3);
+
+  --text-primary: #1A1A2E;
+  --text-secondary: #5A5550;
+  --text-muted: #8A8580;
+
+  --cyan-glow: rgba(0, 180, 200, 0.1);
+  --purple-glow: rgba(120, 40, 200, 0.08);
+  --header-bg: rgba(245, 240, 235, 0.92);
+}
+
+html[data-theme="light"] .cyber-grid {
+  background-image:
+    linear-gradient(rgba(196, 30, 30, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196, 30, 30, 0.04) 1px, transparent 1px);
+}
+
+html[data-theme="light"] body::before {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.02) 2px,
+    rgba(0, 0, 0, 0.02) 4px
+  );
+}
+
+html[data-theme="light"] .card-glow:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08), 0 0 40px rgba(0,0,0,0.04);
+  border-color: var(--red-primary);
+}
+
+html[data-theme="light"] .card-glow {
+  background: #FFFFFF;
+}
+
+html[data-theme="light"] .featured-section {
+  background: var(--bg-secondary);
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: var(--red-dark);
+}
+
+html[data-theme="light"] ::selection {
+  background: rgba(196, 30, 30, 0.2);
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Cyberpunk scanline effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.015) 2px,
+    rgba(255, 255, 255, 0.015) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Grid background */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(220, 30, 30, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(220, 30, 30, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  position: relative;
+}
+
+.cyber-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red-primary), var(--gold), var(--red-primary), transparent);
+  opacity: 0.3;
+}
+
+/* Glow text utility */
+.text-glow-red {
+  text-shadow: 0 0 10px rgba(220, 30, 30, 0.5), 0 0 20px rgba(220, 30, 30, 0.3);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 10px rgba(212, 168, 75, 0.5), 0 0 20px rgba(212, 168, 75, 0.3);
+}
+
+/* Card glow on hover */
+.card-glow:hover {
+  box-shadow: 0 0 20px rgba(220, 30, 30, 0.15), 0 0 40px rgba(220, 30, 30, 0.05);
+  border-color: rgba(220, 30, 30, 0.3);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Button styles */
+.btn-cyber {
+  background: linear-gradient(135deg, var(--red-primary), var(--red-secondary));
+  border: 1px solid rgba(220, 30, 30, 0.4);
+  color: white;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cyber::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--red-primary), var(--gold), var(--red-primary));
+  background-size: 200% 200%;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  animation: gradientShift 3s ease infinite;
+}
+
+.btn-cyber:hover::before {
+  opacity: 1;
+}
+
+.btn-cyber:hover {
+  box-shadow: 0 0 20px rgba(220, 30, 30, 0.4), 0 0 40px rgba(220, 30, 30, 0.2);
+  transform: translateY(-1px);
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Page transition */
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-card-hover) 50%, var(--bg-card) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+
+/* ─── Theme Transition ─── */
+html.transitioning *,
+html.transitioning *::before,
+html.transitioning *::after {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              text-shadow 0.3s ease !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--red-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red-primary);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(220, 30, 30, 0.3);
+  color: white;
+}
+
+
+
+/* Ebook Reader Styles — 可读性优先排版规范 */
+.ebook-reader-content {
+  padding: 1.5em 2em 2em 1.5em;
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, 'Times New Roman', serif;
+
+}
+
+/* 正文字体 — 使用相对单位 em，屏幕自适应 */
+.ebook-reader-content p {
+  font-size: 1em;
+  line-height: 1.75;
+  margin-bottom: 0.5em;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  word-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+/* 段间距 = 两个字宽，通过 + p 相邻选择器实现 */
+.ebook-reader-content p + p {
+  text-indent: 2em;
+  margin-top: 0.8em;
+}
+
+/* 标题层级 — 逐级递减 */
+.ebook-reader-content h1 {
+  font-size: 1.6em;
+  font-weight: 700;
+  text-align: center;
+  margin: 2em 0 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid var(--red-primary);
+  color: var(--red-primary);
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+}
+
+.ebook-reader-content h2 {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin: 2em 0 0.8em;
+  padding: 0.4em 0 0.3em 0.6em;
+  border-left: 3px solid var(--red-primary);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.ebook-reader-content h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 1.5em 0 0.6em;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* 粗体与斜体 */
+.ebook-reader-content strong {
+  font-weight: 700;
+  color: var(--red-primary);
+}
+
+.ebook-reader-content em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+/* 引用 */
+.ebook-reader-content blockquote {
+  border-left: 3px solid var(--red-primary);
+  padding: 0.6em 1em;
+  margin: 1.2em 0;
+  background: var(--bg-card);
+  border-radius: 4px;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.7;
+  font-size: 0.95em;
+}
+
+/* 分割线 */
+.ebook-reader-content hr {
+  border: none;
+  border-top: 1px dashed var(--border-color);
+  margin: 2em auto;
+  opacity: 0.25;
+  max-width: 40%;
+}
+
+/* 列表 */
+.ebook-reader-content ul {
+  list-style: none;
+  padding-left: 0.5em;
+  margin: 1em 0;
+}
+
+.ebook-reader-content ul li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.4em;
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-size: 1em;
+}
+
+.ebook-reader-content ul li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.45em;
+  color: var(--red-primary);
+  opacity: 0.6;
+  line-height: 3.2;
+}
+
+/* 行内代码 */
+.ebook-reader-content code {
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9em;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  background: var(--bg-card);
+  color: var(--red-light);
+}
