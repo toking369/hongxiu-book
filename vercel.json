@@ -1,7 +1,7 @@
-{
+﻿{
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "regions": ["iad1", "sfo1", "hnd1"]
+  "regions": ["hkg1"]
 }
